@@ -9,7 +9,7 @@ while True:
         password = input ("type password: ")
         while password != account[user]:
             password = input ("wrong, try again password: ")
-        print("Youre Login.")
+        print(f"hi {user}!\nYoure Login.")
         break
     elif Question == "Sign up":
         user = input ("type a username: ")
@@ -17,7 +17,7 @@ while True:
             user = input ("user is avilabe, try again: ")
         password = input ("type a password: ")
         account[user] = password
-        print ("welcome")
+        print (f"welcome {user}")
         break
     else:
         Question = input("Sign in or Sign up? ")
