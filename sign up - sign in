@@ -1,0 +1,23 @@
+account = {"ehsan" : "12345"}
+
+Question = input("Sign in or Sign up? ")
+while True:
+    if Question == "Sign in":
+        user = input ("type username: ")
+        while user not in account:
+            user = input ("wrong, try again: ")
+        password = input ("type password: ")
+        while password != account[user]:
+            password = input ("wrong, try again password: ")
+        print("Youre Login.")
+        break
+    elif Question == "Sign up":
+        user = input ("type a username: ")
+        while user in account:
+            user = input ("user is avilabe, try again: ")
+        password = input ("type a password: ")
+        account[user] = password
+        print ("welcome")
+        break
+    else:
+        Question = input("Sign in or Sign up? ")
